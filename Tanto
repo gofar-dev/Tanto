@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kebodohan Tanto Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffbe6;
+      padding: 30px;
+      color: #222;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #ff5e57;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff3b30;
+    }
+    #hasil {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+      min-height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tanto Level Hari Ini</h1>
+    <p>Klik tombol di bawah untuk melihat tingkat kekacauan yang dibuat oleh Tanto hari ini.</p>
+    <button onclick="acakTanto()">Cek Sekarang</button>
+    <div id="hasil"></div>
+  </div>
+
+  <script>
+    const dataTanto = [
+      "Tanto berhasil bikin kopi pake kon ol.",
+      "Tanto nyalain kompor, terus lupa dia masak apa.",
+      "Tanto update status: 'Tidur adalah solusi semua masalah'.",
+      "Tanto nanya jam berapa, padahal pegang HP.",
+      "Tanto lupa password, padahal password-nya 'tanto123'.",
+      "Tanto nyalain kipas di luar rumah, biar angin masuk katanya.",
+      "Tanto beli kuota, tapi lupa dia nggak punya HP.",
+      "Tanto upload story makan, padahal itu foto Google.",
+      "Tanto bilang 'tenang, gue ngerti', lalu error 404.",
+      "Tanto ngirim pesan ke grup yang dia sendiri keluarin."
+    ];
+
+    function acakTanto() {
+      const hasil = document.getElementById('hasil');
+      const acak = dataTanto[Math.floor(Math.random() * dataTanto.length)];
+      hasil.textContent = acak;
+    }
+  </script>
+</body>
+</html>
